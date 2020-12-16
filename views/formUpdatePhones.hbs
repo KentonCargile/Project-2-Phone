@@ -1,0 +1,23 @@
+
+
+<form method="post" action="/updateProductAction/{{_id}}" class="form">
+    <h1>update phone {{name}}</h1>
+    <label for="">name</label>
+    <input id="name" type="text" name="name" value="{{name}}">
+    <label for="">price</label>
+    <input id="price" type="number" name="price" value="{{price}}">
+    <label for="">color</label>
+    <input id="color" type="text" name="color" value="{{color}}">
+    <label for="">image</label>
+    <input id="image" type="file" name="image" value="{{image}}">
+
+<label for="">Phone Brand</label>
+    <select id="brand-select" name="brand" value={{brand}}>
+        <option value="">--Please choose an option--</option>
+        <option value="Apple">Apple</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Huawei">Huawei</option>
+    </select>
+
+    <button class="btn">update !</button>
+</form>
