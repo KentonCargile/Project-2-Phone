@@ -1,10 +1,14 @@
-<h1>List of Phones Backend</h1>
+<h1>Top Phones</h1>
 {{#each phoneToViews}}
 <div class="phone-list">
-    {{this.name}} - {{this.price}} - ({{this.color}} - ({{this.brand}} )<br>
+    {{this.brand}}<br>
+    {{this.name}} <br>
+    {{this.price}}<br>
+    ({{this.color}}<br>
     {{!-- <a href="/phone/{{this._id}}">details</a><br> --}}
     <a href="/phone/update/{{this._id}}">update</a><br>
     <a href="/phone/delete/{{this._id}}">remove</a><br>
+     <br>
 </div>
 {{/each}}
 
