@@ -26,7 +26,7 @@ router.post("/createProductAction",(req,res,next) => {
       console.log(error)
     })
 
-})
+});
 
 // R - CRUD
 router.get("/allPhones", async (req, res) => {
@@ -38,29 +38,35 @@ router.get("/allPhones", async (req, res) => {
 // U - CRUD NOT FINISHED
 
 router.get("/phone/update/:id", async (req,res) => {
-  res.render("formUpdatePhones.hbs")
+ 
+  const onePhoneToView = await phoneModelVariable.findById(req.params.id);
 
+  res.render("formUpdatePhones.hbs", {phone: onePhoneToView})
 }
 );
+/*   res.redirect("/allPhones");
+  }catch (err) {
+  console.log(err); */
+
 
 //go to database through the model to fetch data and findbyid the phone you wanto to update
 //send this infor from database promise to the view (look at Delete router)
 
 
-router.post("/phone/:id", async (req, res) => {
+router.post("/updateProductAction/:id", async (req, res) => {
   try {
-    const updatedResto = await RestaurantModel.findByIdAndUpdate(
+    /* console.log("req----------",req); */
+    const updatedPhoneView = await phoneModelVariable.findByIdAndUpdate(
       req.params.id,
       req.body,
       { new: true } // true: give me the updated documebnt back (default: false)
     );
-    console.log(updatedResto);
-    res.redirect("/restaurant");
+    console.log(updatedPhoneView);
+    res.redirect("/allPhones");
   } catch (err) {
     console.log(err);
   }
 });
-
 
 
 // D - Crud

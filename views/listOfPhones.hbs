@@ -2,10 +2,9 @@
 {{#each phoneToViews}}
 <div class="phone-list">
     {{this.name}} - {{this.price}} - ({{this.color}} - ({{this.brand}} )<br>
-    <a href="/phone/{{this._id}}">details</a><br>
+    {{!-- <a href="/phone/{{this._id}}">details</a><br> --}}
     <a href="/phone/update/{{this._id}}">update</a><br>
     <a href="/phone/delete/{{this._id}}">remove</a><br>
 </div>
 {{/each}}
 
-// we had /restaurant in ahref and we don't know why it worked?

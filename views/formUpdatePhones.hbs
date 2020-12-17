@@ -1,15 +1,15 @@
 
 
-<form method="post" action="/updateProductAction/{{_id}}" class="form">
-    <h1>update phone {{name}}</h1>
+<form method="post" action="/updateProductAction/{{phone._id}}" class="form">
+    <h1>update phone {{phone.name}}</h1>
     <label for="">name</label>
-    <input id="name" type="text" name="name" value="{{name}}">
+    <input id="name" type="text" name="name" value="{{phone.name}}">
     <label for="">price</label>
-    <input id="price" type="number" name="price" value="{{price}}">
+    <input id="price" type="number" name="price" value="{{phone.price}}">
     <label for="">color</label>
-    <input id="color" type="text" name="color" value="{{color}}">
+    <input id="color" type="text" name="color" value="{{phone.color}}">
     <label for="">image</label>
-    <input id="image" type="file" name="image" value="{{image}}">
+    <input id="image" type="file" name="image" value="{{phone.image}}">
 
 <label for="">Phone Brand</label>
     <select id="brand-select" name="brand" value={{brand}}>
