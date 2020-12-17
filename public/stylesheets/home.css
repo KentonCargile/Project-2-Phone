@@ -1,0 +1,11 @@
+.home-container {
+    height: calc(100vh - (84px));
+    overflow: hidden;
+    background: black;
+    width: 100%;
+    background-image: url("https://res.cloudinary.com/dkggutsnf/image/upload/v1608203781/hjgk3rmyfw7oivw9ejis.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  

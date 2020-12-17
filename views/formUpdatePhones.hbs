@@ -1,6 +1,6 @@
 
 
-<form method="post" action="/updateProductAction/{{phone._id}}" class="form">
+<form method="post" action="/updateProductAction/{{phone._id}}" class="form" enctype="multipart/form-data">
     <h1>update phone {{phone.name}}</h1>
     <label for="">name</label>
     <input id="name" type="text" name="name" value="{{phone.name}}">

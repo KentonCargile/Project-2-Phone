@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const  phoneModelVariable  =  require("../models/phoneLoveModel");
+const addCloudinary = require("../config/cloudinary");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -53,7 +54,10 @@ router.get("/phone/update/:id", async (req,res) => {
 //send this infor from database promise to the view (look at Delete router)
 
 
-router.post("/updateProductAction/:id", async (req, res) => {
+router.post("/updateProductAction/:id",addCloudinary.single("image"), async (req, res) => {
+  if (req.file){
+    req.body.image = req.file.path;
+  }
   try {
     /* console.log("req----------",req); */
     const updatedPhoneView = await phoneModelVariable.findByIdAndUpdate(
