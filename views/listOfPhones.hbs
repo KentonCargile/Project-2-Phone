@@ -13,8 +13,17 @@
     <img src={{this.image}} width="300" height="50%" alt="Phone Pic"<br>
 </div> 
 
-<a href="/phone/update/{{this._id}}">Update</a><br>
-<a href="/phone/delete/{{this._id}}">Remove</a><br>
-    <br>
+<form action="/phone/update/{{this._id}}"> 
+    <button class = "btn" type="submit"> 
+            Update
+    </button> 
+</form> 
+<form action="/phone/delete/{{this._id}}"> 
+    <button class = "btn" type="submit"> 
+            Remove
+    </button> 
+</form> 
+
+
 {{/each}}
 
