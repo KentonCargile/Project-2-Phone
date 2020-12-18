@@ -1,23 +1,49 @@
 .home-container {
-  height: calc(100vh - (35px));
+  /* height: calc(100vh - (45px)); */
   color: white;
-  overflow: hidden;
   background: black;
   width: 100%;
-  background-image: url("https://res.cloudinary.com/dkggutsnf/image/upload/v1608203781/hjgk3rmyfw7oivw9ejis.jpg");
+  /* background-image: url("https://res.cloudinary.com/dkggutsnf/image/upload/v1608203781/hjgk3rmyfw7oivw9ejis.jpg"); */
   background-size: contain;
   background-repeat: no-repeat;
 
 }
+
+.home-container img {
+  height: calc(100vh - (45px));
+  
+}
+  
+
+
 
 h1{
   padding: 10px;
   text-align: center;
   font-size: 50px;
   font-family: Arial;
+  color: white;
 }
 
+body h1{
+  color: white;
+}
 
+.phoneList {
+  color: white;
+  padding-top: 25px;
+  font-style: oblique;
+  font-size: 15px;
+}
+
+.form{
+  color: white;
+}
+
+a{
+  color: white;
+  font-size: 10px;
+}
 /* .home-container {
     height: calc(100vh - (84px));
     overflow: hidden;

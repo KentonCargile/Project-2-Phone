@@ -3,14 +3,18 @@
 <div class="phoneList">
     {{this.brand}}<br>
     {{this.name}} <br>
-    {{this.price}}<br>
+    Price (Euro):{{this.price}}<br>
     {{this.color}}<br>
-    <img src={{this.image}} alt="Phone Pic"<br>
     <br>
-    {{!-- <a href="/phone/{{this._id}}">details</a><br> --}}
-    <a href="/phone/update/{{this._id}}">update</a><br>
-    <a href="/phone/delete/{{this._id}}">remove</a><br>
-     <br>
+
 </div>
+
+<div class="photo"> 
+    <img src={{this.image}} width="300" height="50%" alt="Phone Pic"<br>
+</div> 
+
+<a href="/phone/update/{{this._id}}">Update</a><br>
+<a href="/phone/delete/{{this._id}}">Remove</a><br>
+    <br>
 {{/each}}
 
